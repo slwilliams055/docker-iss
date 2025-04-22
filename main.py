@@ -5,6 +5,8 @@ import logging
 import os
 from pymongo import MongoClient
 
+#editing main.py so I can push them and test it for lab8. 
+
 """
     This script is used to get the current location of the ISS from the Open Notify API 
       and write it to a MongoDB database.
@@ -25,8 +27,8 @@ logger = logging.getLogger(__name__)
 def get_iss_location():
     url = "http://api.open-notify.org/iss-now.json"
     try:
-        response = requests.get(url)
-        r = response.json()
+        responses = requests.get(url)
+        r = responses.json()
 
         # fetch values from response
         timestamp = r['timestamp']
